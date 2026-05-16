@@ -14,8 +14,66 @@
   /* padding-inline: 6px; */
 }
 
+@utility heading-hero {
+  @apply text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6;
+}
+
+@utility text-paragraph {
+  @apply font-medium text-base text-secondary leading-relaxed;
+}
+
+@utility heading-section {
+  @apply text-3xl md:text-4xl font-bold text-dark dark:text-white leading-tight mb-4;
+}
+
+@utility heading-card {
+  @apply text-xl font-semibold text-dark dark:text-white leading-snug;
+}
+
+@utility section-label {
+  @apply font-semibold text-lg text-primary mb-2 uppercase;
+}
+
+@utility section-padding {
+  @apply pt-36 pb-32;
+}
+
+@utility form-label {
+  @apply mb-2 block text-sm font-medium text-dark dark:text-white;
+}
+
+@utility form-input {
+  @apply text-sm w-full bg-slate-200 dark:bg-slate-700 dark:text-white p-3 rounded-md focus:outline-none focus:ring-1 focus:ring-primary;
+}
+
+@utility card {
+  @apply rounded-xl overflow-hidden p-4;
+}
+
+@utility card-hover {
+  @apply transition duration-500 hover:scale-105 hover:shadow-xl;
+}
+
+@utility card-shadow {
+  @apply shadow-md dark:shadow-primary/20;
+}
+
+@utility social-icon {
+  @apply w-10 h-10 rounded-full flex justify-center items-center bg-primary text-slate-300  hover:bg-primary/50 transition duration-300;
+}
+
+@utility btn-primary {
+  @apply py-4 px-8 bg-primary text-white text-base rounded-full font-semibold transition duration-300 ease-in-out hover:bg-primary/80 hover:shadow-lg;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
 body {
   font-family: "Inter", sans-serif;
+  @apply text-dark bg-white leading-relaxed;
 }
 
 .navbar-fixed {
