@@ -15,7 +15,7 @@
 }
 
 @utility heading-hero {
-  @apply text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6;
+  @apply text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6 dark:text-white;
 }
 
 @utility text-paragraph {
