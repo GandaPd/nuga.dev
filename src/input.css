@@ -59,7 +59,7 @@
 }
 
 @utility social-icon {
-  @apply w-10 h-10 rounded-full flex justify-center items-center bg-primary text-slate-300  hover:bg-primary/50 transition duration-300;
+  @apply w-10 h-10 rounded-full flex justify-center items-center bg-primary text-slate-300 hover:bg-primary/50 transition duration-300;
 }
 
 @utility btn-primary {
@@ -77,16 +77,18 @@ body {
 }
 
 .navbar-fixed {
-  @apply fixed  z-[9999] bg-white/70 backdrop-blur-sm dark:bg-dark/50;
+  @apply fixed z-[9999] bg-white/70 backdrop-blur-sm dark:bg-dark/50;
   box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
 }
 
+/* MENAMBAHKAN TRANSISI HALUS DAN TITIK TUMPU ASAL PADA SETIAP GARIS */
 .hamburger-line {
-  @apply w-[30px] h-[2px] my-2 block bg-dark dark:bg-white;
+  @apply w-[30px] h-[2px] my-2 block bg-dark dark:bg-white transition duration-300 ease-in-out;
 }
 
+/* MEMPERBAIKI ROTASI AGAR MEMBENTUK HURUF X SEMPURNA */
 .hamburger-active > span:nth-child(1) {
-  @apply rotate-45;
+  @apply rotate-45 origin-top-left;
 }
 
 .hamburger-active > span:nth-child(2) {
@@ -94,11 +96,12 @@ body {
 }
 
 .hamburger-active > span:nth-child(3) {
-  @apply -rotate-45;
+  @apply -rotate-45 origin-bottom-left;
 }
 
+/* MENERAPKAN TRANSISI TRANSLAXI SUPAYA LINGKARAN TOGGLE BERGESER DENGAN MULUS */
 #dark-toggle:checked ~ label div.toggle-circle {
-  @apply translate-x-3;
+  @apply translate-x-4;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
