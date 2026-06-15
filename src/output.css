@@ -7,6 +7,12 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-400: oklch(70.4% 0.191 22.216);
+    --color-red-500: oklch(63.7% 0.237 25.331);
+    --color-red-600: oklch(57.7% 0.245 27.325);
+    --color-emerald-400: oklch(76.5% 0.177 163.223);
+    --color-emerald-500: oklch(69.6% 0.17 162.48);
+    --color-emerald-600: oklch(59.6% 0.145 163.225);
     --color-sky-500: oklch(68.5% 0.169 237.323);
     --color-pink-500: oklch(65.6% 0.241 354.308);
     --color-slate-100: oklch(96.8% 0.007 247.896);
@@ -665,6 +671,12 @@
   .bg-dark {
     background-color: var(--color-dark);
   }
+  .bg-emerald-500\/20 {
+    background-color: color-mix(in srgb, oklch(69.6% 0.17 162.48) 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-emerald-500) 20%, transparent);
+    }
+  }
   .bg-primary {
     background-color: var(--color-primary);
   }
@@ -672,6 +684,12 @@
     background-color: color-mix(in srgb, #3aa6a0 10%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-primary) 10%, transparent);
+    }
+  }
+  .bg-red-500\/20 {
+    background-color: color-mix(in srgb, oklch(63.7% 0.237 25.331) 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-red-500) 20%, transparent);
     }
   }
   .bg-slate-100 {
@@ -812,11 +830,17 @@
   .text-dark {
     color: var(--color-dark);
   }
+  .text-emerald-600 {
+    color: var(--color-emerald-600);
+  }
   .text-pink-500 {
     color: var(--color-pink-500);
   }
   .text-primary {
     color: var(--color-primary);
+  }
+  .text-red-600 {
+    color: var(--color-red-600);
   }
   .text-secondary {
     color: var(--color-secondary);
@@ -1199,6 +1223,16 @@
       background-color: var(--color-slate-800);
     }
   }
+  .dark\:text-emerald-400 {
+    &:where(.dark, .dark *) {
+      color: var(--color-emerald-400);
+    }
+  }
+  .dark\:text-red-400 {
+    &:where(.dark, .dark *) {
+      color: var(--color-red-400);
+    }
+  }
   .dark\:text-white {
     &:where(.dark, .dark *) {
       color: var(--color-white);
@@ -1255,11 +1289,19 @@ body {
   height: 2px;
   width: 30px;
   background-color: var(--color-dark);
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+  --tw-ease: var(--ease-in-out);
+  transition-timing-function: var(--ease-in-out);
   &:where(.dark, .dark *) {
     background-color: var(--color-white);
   }
 }
 .hamburger-active > span:nth-child(1) {
+  transform-origin: 0 0;
   rotate: 45deg;
 }
 .hamburger-active > span:nth-child(2) {
@@ -1269,10 +1311,11 @@ body {
   scale: var(--tw-scale-x) var(--tw-scale-y);
 }
 .hamburger-active > span:nth-child(3) {
+  transform-origin: 0 100%;
   rotate: calc(45deg * -1);
 }
 #dark-toggle:checked ~ label div.toggle-circle {
-  --tw-translate-x: calc(var(--spacing) * 3);
+  --tw-translate-x: calc(var(--spacing) * 4);
   translate: var(--tw-translate-x) var(--tw-translate-y);
 }
 @property --tw-font-weight {
