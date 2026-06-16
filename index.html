@@ -69,7 +69,8 @@
           <div class="w-full self-end px-4 md:w-1/2 lg:w-1/2 md:mb-20 lg:mb-0">
             <div class="mt-10 relative lg:mt-0 lg:right-0">
               <img
-                src="src/img/hero.png"
+                src="src/img/hero.webp"
+                fetchpriority="high"
                 alt="Hero Image"
                 class="max-w-full mx-auto relative z-10 hover:scale-105 transition duration-500"
               />
@@ -203,7 +204,8 @@
           <div class="w-full self-end px-4 lg:w-1/2">
             <div class="mt-10 relative lg:mt-0 lg:right-0">
               <img
-                src="src/img/ganda.png"
+                src="src/img/ganda.webp"
+                loading="lazy"
                 alt="Ganda Prawira Dinata"
                 class="max-w-full mx-auto relative z-10"
               />
@@ -240,14 +242,14 @@
             <a href="#home" class="font-bold text-lg text-primary block py-4">
               <!-- Logo Light Mode -->
               <img
-                src="src/img/Nuga.png"
+                src="src/img/Nuga.webp"
                 alt="Logo Nuga Web Development"
                 style="height: 40px; width: auto"
                 class="block dark:hidden"
               />
               <!-- Logo Dark Mode -->
               <img
-                src="src/img/nuga-dark-mode.png"
+                src="src/img/nuga-dark-mode.webp"
                 alt="Logo Nuga Web Development"
                 style="height: 40px; width: auto"
                 class="hidden dark:block"
@@ -449,7 +451,8 @@
             <div class="mb-12 p-4 md:w-1/2">
               <div class="card card-hover card-shadow">
                 <img
-                  src="src/img/portfolio/1.png"
+                  src="src/img/portfolio/1.webp"
+                  loading="lazy"
                   alt="Undangan Nikah"
                   class="w-full rounded-xl"
                 />
@@ -467,16 +470,17 @@
             <div class="mb-12 p-4 md:w-1/2">
               <div class="card card-hover card-shadow">
                 <img
-                  src="src/img/portfolio/2.png"
-                  alt="e-Commerce - Kopi Digital"
+                  src="src/img/portfolio/2.webp"
+                  loading="lazy"
+                  alt="Landing Page - Kue Rumah Hana"
                   class="w-full rounded-xl"
                 />
                 <h3 class="mt-5 mb-3">
                   <a
-                    href="https://gandapd.github.io/Kopi-Digital/"
+                    href="https://kue-rumah-hana.vercel.app/"
                     class="heading-card hover:text-primary"
                     target="_blank"
-                    >Kopi Digital</a
+                    >Kue Rumah Hana</a
                   >
                 </h3>
                 <p class="text-paragraph">Landing Page</p>
@@ -485,25 +489,27 @@
             <div class="mb-12 p-4 md:w-1/2">
               <div class="card card-hover card-shadow">
                 <img
-                  src="src/img/portfolio/3.png"
-                  alt="e-Commerce - Artisan Woodcraft"
+                  src="src/img/portfolio/3.webp"
+                  loading="lazy"
+                  alt="Portfolio - Rendra. Photography"
                   class="w-full rounded-xl"
                 />
                 <h3 class="mt-5 mb-3">
                   <a
-                    href="https://gandapd.github.io/artisan-woodwork/"
+                    href="https://rendra-phi.vercel.app/"
                     class="heading-card hover:text-primary"
                     target="_blank"
-                    >Artisan Woodcraft</a
+                    >Rendra. | Photography Portfolio</a
                   >
                 </h3>
-                <p class="text-paragraph">Landing Page</p>
+                <p class="text-paragraph">Portfolio</p>
               </div>
             </div>
             <div class="mb-12 p-4 md:w-1/2">
               <div class="card card-hover card-shadow">
                 <img
-                  src="src/img/portfolio/4.png"
+                  src="src/img/portfolio/4.webp"
+                  loading="lazy"
                   alt="e-Commerce - VibeLens Agency"
                   class="w-full rounded-xl"
                 />
@@ -542,7 +548,8 @@
                 class="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden mb-10"
               >
                 <img
-                  src="src/img/blog/tips-belajar-programing.png"
+                  src="src/img/blog/tips-belajar-programing.webp"
+                  loading="lazy"
                   alt="Tips Belajar Programing"
                   class="w-full"
                 />
@@ -571,7 +578,8 @@
                 class="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden mb-10"
               >
                 <img
-                  src="src/img/blog/review-keyboard.png"
+                  src="src/img/blog/review-keyboard.webp"
+                  loading="lazy"
                   alt="Review Keyboard GMMK Pro"
                   class="w-full"
                 />
@@ -600,7 +608,8 @@
                 class="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden mb-10"
               >
                 <img
-                  src="src/img/blog/menikmati-secangkir-kopi.png"
+                  src="src/img/blog/menikmati-secangkir-kopi.webp"
+                  loading="lazy"
                   alt="Menikmati Secangkir Kopi"
                   class="w-full"
                 />
@@ -651,7 +660,7 @@
                         alt="Mail Icons"
                       />
                     </div>
-                    <p class="text-paragraph">gandaprawiradinata@gmail.com</p>
+                    <p class="text-paragraph">hello@nugadev.com</p>
                   </div>
                   <div class="flex items-center gap-2">
                     <div class="w-10 h-10 flex items-center justify-center">
@@ -812,9 +821,8 @@
           <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
             <h2 class="font-bold text-4xl text-white mb-5">Nuga</h2>
             <h3 class="font-bold text-2xl mb-2">Hubungi Kami</h3>
-            <p>gandaprawiradinata@gmail.com</p>
-            <p>Jl. Datuk Tunggul, Perum. Anajim, Blok E3</p>
-            <p>Pekanbaru</p>
+            <p>hello@nugadev.com</p>
+            <p>Pekanbaru - Riau</p>
           </div>
           <div class="w-full px-4 mb-12 md:w-1/3">
             <h3 class="font-semibold text-xl text-white mb-5">
@@ -968,12 +976,12 @@
             </a>
           </div>
           <p class="font-medium text-sm text-slate-500 text-center">
-            Dibuat dengan <span class="text-pink-500"> ❤️ </span>oleh
+            Dibuat oleh
             <a
               href="https://instagram.com/ganda_prawiradinata"
               target="_blank"
               class="font-bold text-primary"
-              >Ganda Prawira Dinata</a
+              >Nuga Development</a
             >, menggunakan
             <a
               href="https://tailwindcss.com"
@@ -986,18 +994,6 @@
       </div>
     </footer>
     <!-- Footer End -->
-
-    <!-- Back to top Start -->
-    <a
-      href="#home"
-      class="hidden fixed justify-center items-center z-[9999] bottom-4 right-4 h-12 w-12 md:h-14 md:w-14 bg-primary block rounded-full p-4 hover:animate-pulse"
-      id="to-top"
-    >
-      <span
-        class="block w-4 h-4 md:w-5 md:h-5 border-t-2 border-l-2 rotate-45 mt-2 md:mt-2 border-white"
-      ></span>
-    </a>
-    <!-- Back to top End -->
 
     <script src="src/js/script.js"></script>
   </body>
